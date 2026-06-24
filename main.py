@@ -3,8 +3,8 @@ import zipfile
 import requests
 from pathlib import Path
 
-package = "maturin"
-version = "1.14.1"
+package = "pydantic_core"
+version = "2.46.4"
 
 # Get metadata for the specific version
 resp = requests.get(
