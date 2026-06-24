@@ -10,6 +10,8 @@ jobs:
       - run: pipx run uv run main.py
       - name: Build wheels
         run: pipx run cibuildwheel --platform android
+        with:
+          working-directory: maturin-1.14.1
       - run: find -type f -name "*arm*"
 
       - uses: actions/upload-artifact@v4
