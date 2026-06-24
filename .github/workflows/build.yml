@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - run: pipx uv run main.py
+      - run: pipx run uv run main.py
       - name: Build wheels
         uses: pypa/cibuildwheel@v4.1.0
         env:
