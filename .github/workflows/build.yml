@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v6
       - run: pipx run uv run main.py
       - name: Build wheels
-        run: pipx run cibuildwheel --platform android
+        run: pipx run cibuildwheel --platform android --output-dir ./wheelhouse/ --archs arm64_v8a
         env:
           CIBW_AUDIT_COMMAND: ""
         working-directory: pydantic_core-2.46.4
