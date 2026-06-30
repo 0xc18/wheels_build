@@ -12,7 +12,7 @@ jobs:
         run: pipx run cibuildwheel --platform android --output-dir ../wheelhouse/ --archs arm64_v8a
         env:
           CIBW_AUDIT_COMMAND: ""
-        working-directory: pydantic_core-2.46.4
+        working-directory: ruff-0.15.20
       - run: find -type f -name "*arm*"
 
       - uses: actions/upload-artifact@v4
