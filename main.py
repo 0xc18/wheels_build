@@ -3,8 +3,8 @@ import zipfile
 import requests
 from pathlib import Path
 
-package = "pydantic_core"
-version = "2.46.4"
+package = "ruff"
+version = "0.15.20"
 
 # Get metadata for the specific version
 resp = requests.get(
