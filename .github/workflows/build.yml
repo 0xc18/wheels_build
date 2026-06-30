@@ -12,7 +12,7 @@ jobs:
         run: pipx run cibuildwheel --platform android --output-dir ../wheelhouse/ --archs arm64_v8a
         env:
           CIBW_AUDIT_COMMAND: "echo complete"
-          CIBW_REPAIR_WHEEL_COMMAND: "echo idk"
+          CIBW_REPAIR_WHEEL_COMMAND: "cp -rv {wheel} {dest_dir}"
         working-directory: ruff-0.15.20
       - run: find -type f -name "*arm*"
 
